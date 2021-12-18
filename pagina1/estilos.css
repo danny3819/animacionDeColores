@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+}
+nav{
+    display:grid;
+    grid-area:navegador;
+    background:rgba(97,235,255,0.35);
+}
+nav ul li{
+    transition: 0.4s ;
+}
+
+nav ul li:hover{
+    padding-left: 100px;    
+}
+nav ul li a{
+    bottom: 55px;
+    text-decoration:none;
+    color: black;
+    font-size:25px;
+}
+
+.logo{
+    display:flex;
+    top:3vh;
+    position: inherit;
+}
+
+.anuncio{
+    display:grid;
+    grid-area:anuncio;
+    grid-gap:8px;
+    overflow:hidden;
+}
+.contenido{
+    background-color: rgba(0, 255, 255, 0.171);
+    grid-area: contenido;
+    overflow:auto;
+}
+/* scroll de contenido */
+.contenido::-webkit-scrollbar{
+background-color:rgba(0, 255, 255, 0.171);
+width: 10px;
+}
+.contenido::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.507), rgba(255, 0, 221, 0.507),rgba(0, 0, 255, 0.507));
+
+    border-radius:5px;
+    height: 10px;
+}
+body::-webkit-scrollbar{
+background-color:rgba(0, 0, 0, 0.39);
+width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.507), rgba(255, 0, 221, 0.507),rgba(0, 0, 255, 0.507));
+
+    border-radius:5px;
+    height: 10px;
+}
+/* mozilla */
+.contenido::-moz-scrollbar{
+background-color:rgba(0, 255, 255, 0.171);
+width: 10px;
+}
+.contenido::-moz-scrollbar-thumb{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.507), rgba(255, 0, 221, 0.507),rgba(0, 0, 255, 0.507));
+
+    border-radius:5px;
+    height: 10px;
+}
+body::-moz-scrollbar{
+background-color:rgba(0, 0, 0, 0.39);
+width: 10px;
+}
+body::-moz-scrollbar-thumb{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.507), rgba(255, 0, 221, 0.507),rgba(0, 0, 255, 0.507));
+
+    border-radius:5px;
+    height: 10px;
+}
+
+/* termina scroll */
+/* conviene poner todo en cssgrid solo el nav en flexbox por que es display de bloque */
+
+.pie{
+    display:grid;
+    grid-area:pie;
+    background-color: black;
+    color:#ffffff;
+    text-align: center;
+    align-items: center;
+}
+ 
+.todo{
+    max-width:1500px;
+    max-height:100vh;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr) 225px;
+    grid-template-rows:10vh 1fr 1fr 10vh 6vh ;
+    grid-template-areas: "navegador navegador navegador"
+                         "contenido contenido anuncio"
+                         "contenido contenido anuncio"
+                         "contenido contenido anuncio"
+                         "pie       pie       pie";
+    grid-gap:8px;
+    background-image: url(fondo.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment:fixed;
+}
+
+p::-moz-selection{
+    background:red;
+    color: azure;
+}
+
+p{
+    scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
+}
+
+/* .body {
+background-image: url(fondo.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment:fixed;
+} */
+
+/* contenedor2 */
+
+.contenedor-2{
+    height:100vh;
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:"targeta targeta targeta targeta"
+                        "contenido-1 contenido-2 contenido-3 contenido-4"
+    ;
+    background-image: url(https://static.canalapps.com/uploads/2020/08/fondos-de-pantalla-canalapps-1200x593.jpg);
+background-size:cover;
+background-repeat: no-repeat;
+background-attachment:fixed;
+justify-self:end;
+}
+.contenido-1{
+    display:grid;
+    grid-area: contenido-1;
+    text-align: center;
+    background-color:rgba(0, 255, 255, 0.171);
+    border-radius:5px;
+    /* align-self: center; */
+  justify-self: center;
+}
+.contenido-2{
+    display:grid;
+    grid-area: contenido-2;
+    text-align: center;
+    background-color:rgba(0, 255, 255, 0.171);
+    border-radius:5px;
+    /* align-self: center; */
+  justify-self: center;
+}
+.contenido-3{
+    display:grid;
+    grid-area: contenido-3;
+    text-align: center;
+    background-color:rgba(0, 255, 255, 0.171);
+    border-radius:5px;
+    /* align-self: center; */
+  justify-self: center;
+}
+.contenido-4{
+    display:grid;
+    grid-area: contenido-4;
+    text-align: center;
+    background-color:rgba(0, 255, 255, 0.171);
+    border-radius:5px;
+    /* align-self: center; */
+  justify-self: center;
+}
+
+.targeta{
+    display: inline;
+    background-color:#02589650;
+    width: 200px;
+    border-radius:5px;
+    text-align: center;
+    align-self: center;
+  justify-self: center;
+    transition:1.5s;
+}
+.targeta img{
+    border-radius:5px;
+}
+.targeta a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color:black;
+    display:block;
+}
+
+.targeta:hover{
+    background-color:#025896e8;
+}
